@@ -247,7 +247,7 @@ while true; do
         pwmValue=$pwmDrive
         log "Setting PWM based on Drive temperature"
         cooldown=$COOLDOWN_MAX
-    elif (( "$pwmNVMe" > "pwmDrive" )) && (( "$pwmNVMe" > "$pwmCPU" )); then
+    elif (( "$pwmNVMe" > "$pwmDrive" )) && (( "$pwmNVMe" > "$pwmCPU" )); then
         pwmValue=$pwmNVMe
         log "Setting PWM based on NVMe temperature"
         cooldown=$COOLDOWN_MAX
